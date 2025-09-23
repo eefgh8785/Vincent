@@ -5,27 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vincent Yu-Tai Ou Yang</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
+<!-- 美化 CSS -->
   <style>
     body {
-      font-family: 'Merriweather', serif;
+      font-family: "Helvetica Neue", Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #f9f9f9, #f1f1f1);
+      background-color: #f5f5f5;
       color: #333;
+      line-height: 1.6;
     }
 
+    /* 頂部標題 */
     header {
-      position: sticky;
-      top: 0;
-      background-color: #A23400;
+      background: linear-gradient(135deg, #A23400, #D35400);
       color: white;
-      padding: 20px;
+      padding: 40px 20px 20px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    }
+
+    nav {
+      margin-top: 15px;
     }
 
     nav a {
@@ -33,77 +40,62 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #FFD580;
+      color: #FFDAB9;
     }
 
+    /* 每個區塊 */
     section {
-      padding: 40px 20px;
+      padding: 40px 30px;
       background-color: white;
       margin: 30px auto;
       max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #f2f2f2;
-    }
-
-    /* Works 區塊卡片設計 */
-    .work-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-
-    .work-item {
-      background: #fafafa;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
       transition: transform 0.2s;
     }
 
-    .work-item:hover {
-      transform: translateY(-5px);
+    section:hover {
+      transform: translateY(-3px);
     }
 
-    /* 按鈕設計 */
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #A23400;
+    section h2 {
+      border-left: 5px solid #A23400;
+      padding-left: 10px;
+      color: #A23400;
+    }
+
+    /* 按鈕 */
+    button {
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #A23400, #D35400);
       color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s;
+      font-size: 1em;
+      margin-top: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.2s;
     }
 
-    .btn:hover {
-      background-color: #7a2700;
+    button:hover {
+      background: linear-gradient(135deg, #D35400, #FF7F50);
+      transform: scale(1.05);
     }
 
-    .btn-soundcloud {
-      background-color: #FF5500;
-    }
-
-    .btn-soundcloud:hover {
-      background-color: #e64e00;
-    }
-
+    /* footer */
     footer {
       text-align: center;
       padding: 20px;
       background-color: #A23400;
       color: white;
       margin-top: 40px;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -120,46 +112,42 @@
 
   <section id="about">
     <h2>Bio</h2>
-    <p>
-      Vincent Yu-Tai Ouyang is a composer, pianist, and harpsichordist. His musical compositions often explore observations of life and reflect on emotional experiences, aiming to convey emotions through his music. Currently pursuing his Master of Music degree in composition at the University of Calgary, he studies with Dr. Laurie Radford and is completing his thesis under the supervision of Prof. Allan Gordon Bell. Vincent is currently exploring orchestral and large ensemble writing, with a particular focus on integrating East Asian aesthetics into contemporary Western idioms.
-    </p>
+    <p>Vincent Yu-Tai Ouyang is a composer, pianist, and harpsichordist. His musical compositions often explore observations of life and reflect on emotional experiences, aiming to convey emotions through his music. Currently pursuing his Master of Music degree in composition at the University of Calgary, He studies with Dr. Laurie Radford and is completing his thesis under the supervision of Prof. Allan Gordon Bell. Vincent is currently exploring orchestral and large ensemble writing, with a particular focus on integrating East Asian aesthetics into contemporary Western idioms. </p>
   </section>
 
-  <section id="projects">
-    <h2>Works</h2>
-    <div class="work-list">
-      <div class="work-item">Éparpillement for alto saxophone and piano (2025)</div>
-      <div class="work-item">Souvenir for violin and piano (2025)</div>
-      <div class="work-item">Désireux II for violin, violoncello and piano (2024)</div>
-      <div class="work-item">Fugue for keyboard solo (2024)</div>
-      <div class="work-item">Fughetta in G major for keyboard solo (2024)</div>
-      <div class="work-item">With the Night for flute, violin, violoncello, soprano and piano (2023)</div>
-      <div class="work-item">Fughetta in f minor for keyboard solo (2023)</div>
-      <div class="work-item">Rêve for string quartet (2023)</div>
-      <div class="work-item">Tai Zu Lau Gie Gung for a cappella (2023)</div>
-      <div class="work-item">Calliope for orchestra (2022)</div>
-      <div class="work-item">Intermezzo for piano solo (2022)</div>
-      <div class="work-item">Prélude for piano solo (2022)</div>
-      <div class="work-item">Kyo for piano solo (2022)</div>
-      <div class="work-item">Désireux for clarinet, violoncello and piano (2021)</div>
-      <div class="work-item">Piano Trio in E minor for violin, cello and piano (2021)</div>
-      <div class="work-item">Fugue in F Sharp minor for keyboard solo (2021)</div>
-    </div>
+ <section id="projects">
+  <h2>Works</h2>
+  <p>Éparpillement for alto saxophone and piano (2025)</p>
+  <p>Souvenir for violin and piano (2025)</p>
+  <p>Désireux II for violin, violoncello and piano (2024)</p>
+  <p>Fugue for keyboard solo (2024)</p>
+  <p>Fughetta in G major for keyboard solo (2024)</p>
+  <p>With the Night for flute, violin, violoncello, soprano and piano (2023)</p>
+  <p>Fughetta in f minor for keyboard solo (2023)</p>
+  <p>Rêve for string quartet (2023)</p>
+  <p>Tai Zu Lau Gie Gung for a cappella (2023)</p>
+  <p>Calliope for orchestra (2022)</p>
+  <p>Intermezzo for piano solo (2022)</p>
+  <p>Prélude for piano solo (2022)</p>
+  <p>Kyo for piano solo (2022)</p>
+  <p>Désireux for clarinet, violoncello and piano (2021)</p>
+  <p>Piano Trio in E minor for violin, cello and piano (2021)</p>
+  <p>Fugue in F Sharp minor for keyboard solo (2021)</p>
 
-    <p style="text-align:center; margin-top:20px;">
-      <a class="btn btn-soundcloud" href="https://soundcloud.com/yuta-185090400" target="_blank">🎵 Visit my SoundCloud</a>
-    </p>
-  </section>
+  <button onclick="window.open('https://soundcloud.com/yuta-185090400', '_blank')">
+    🎵 Listen on SoundCloud
+  </button>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:eefgh8785@email.com">eefgh8785@email.com</a></p>
-    <p>Phone: <a href="tel:+18252883413">+1 825-288-3413</a></p>
-  </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: eefgh8785@email.com</p>
+  <p>Phone: +1 825-288-3413</p>
+</section>
 
-  <footer>
-    <p>© 2025 Vincent Yu-Tai Ou Yang</p>
-  </footer>
+<footer>
+  &copy; 2025 Vincent Yu-Tai Ou Yang. All rights reserved.
+</footer>
 
 </body>
 </html>
