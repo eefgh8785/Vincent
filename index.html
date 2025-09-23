@@ -6,39 +6,37 @@
 <title>Vincent Yu-Tai Ou Yang</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  body { margin:0; padding:0; font-family:'Merriweather', serif; background:#e0e0e0; color:#333; scroll-behavior: smooth;}
+  body { margin:0; padding:0; font-family:'Merriweather', serif; background:#e0e0e0; color:#333; scroll-behavior: smooth; }
   a { text-decoration:none; color:#A23400; }
 
   /* 導航列 */
-  nav { position:sticky; top:0; width:100%; background:#f5f5f5; box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:1000; }
+  nav { position:sticky; top:0; width:100%; background:#f5f5f5; box-shadow:0 2px 10px rgba(0,0,0,0.1); z-index:1000; }
   nav ul { display:flex; justify-content:center; list-style:none; margin:0; padding:15px; }
   nav ul li { margin:0 20px; }
-  nav ul li a { font-family:'Montserrat',sans-serif; font-weight:500; color:#555; }
+  nav ul li a { font-family:'Montserrat',sans-serif; font-weight:500; color:#555; transition:0.3s;}
   nav ul li a:hover { color:#A23400; }
 
   /* Hero 區 */
   .hero { display:flex; justify-content:center; align-items:center; text-align:center; min-height:80vh; background: #b0b0b0; color:white;}
   .hero h1 { font-family:'Montserrat',sans-serif; font-size:3em; margin:0;}
   .hero p { margin-top:15px; font-size:1.2em;}
-  .btn-primary { display:inline-block; padding:12px 28px; background:#A23400; color:white; border-radius:6px; margin-top:30px; font-family:'Montserrat',sans-serif; font-weight:700; transition:0.3s;}
-  .btn-primary:hover { background:#862800; transform:scale(1.05); }
+
+  /* 按鈕樣式 */
+  .btn { display:inline-block; padding:12px 28px; background:#A23400; color:white; border-radius:6px; margin-top:20px; font-family:'Montserrat',sans-serif; font-weight:700; transition:0.3s; }
+  .btn:hover { background:#862800; transform:scale(1.05); }
 
   /* Section 區 */
-  section { max-width:900px; margin:60px auto; padding:40px 20px; background:white; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.05);}
+  section { max-width:900px; margin:60px auto; padding:40px 20px; background:white; border-radius:12px; box-shadow:0 6px 25px rgba(0,0,0,0.08); opacity:0; transform:translateY(30px); transition:1s; }
+  section.visible { opacity:1; transform:translateY(0); }
+
   h2 { font-family:'Montserrat',sans-serif; font-size:2em; color:#A23400; margin-bottom:20px; border-left:6px solid #A23400; padding-left:12px; }
 
   /* Bio 文字行距 */
-  #about p {
-    line-height:2; /* 行距寬一些 */
-    font-size:1.1em;
-  }
-
-  /* Works 按鈕 */
-  .btn-secondary { display:inline-block; padding:12px 28px; background:#A23400; color:white; border-radius:6px; margin-top:20px; font-family:'Montserrat',sans-serif; font-weight:700; transition:0.3s;}
-  .btn-secondary:hover { background:#862800; transform:scale(1.05); }
+  #about p { line-height:2; font-size:1.1em; }
 
   /* Contact 區 */
   .contact-info { line-height:1.8em; font-size:1.2em; margin-top:20px; }
+
 </style>
 </head>
 <body>
@@ -84,8 +82,7 @@
   <p>Désireux for clarinet, violoncello and piano (2021)</p>
   <p>Piano Trio in E minor for violin, cello and piano (2021)</p>
   <p>Fugue in F Sharp minor for keyboard solo (2021)</p>
-
-  <a class="btn-secondary" href="https://soundcloud.com/yuta-185090400" target="_blank">🎵 Listen on SoundCloud</a>
+  <a class="btn" href="https://soundcloud.com/yuta-185090400" target="_blank">🎵 Listen on SoundCloud</a>
 </section>
 
 <!-- Contact -->
@@ -98,7 +95,18 @@
   </div>
 </section>
 
+<script>
+  // 滾動淡入效果
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold:0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
-
 
