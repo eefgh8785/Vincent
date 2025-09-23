@@ -6,45 +6,48 @@
 <title>Vincent Yu-Tai Ou Yang</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  body { margin:0; padding:0; font-family:'Merriweather', serif; background:#fafafa; color:#333; scroll-behavior: smooth;}
-  a { text-decoration:none; color:inherit; }
+  body { margin:0; padding:0; font-family:'Merriweather', serif; background:#e0e0e0; color:#333; scroll-behavior: smooth;}
+  a { text-decoration:none; color:#A23400; }
 
   /* 導航列 */
-  nav { position:sticky; top:0; width:100%; background:rgba(255,255,255,0.9); backdrop-filter:blur(8px); box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:1000; }
+  nav { position:sticky; top:0; width:100%; background:#f5f5f5; box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:1000; }
   nav ul { display:flex; justify-content:center; list-style:none; margin:0; padding:15px; }
   nav ul li { margin:0 20px; }
   nav ul li a { font-family:'Montserrat',sans-serif; font-weight:500; color:#555; }
   nav ul li a:hover { color:#A23400; }
 
   /* Hero 區 */
-  .hero { display:flex; justify-content:center; align-items:center; text-align:center; min-height:100vh; background: linear-gradient(135deg,#A23400,#D35400); color:white;}
+  .hero { display:flex; justify-content:center; align-items:center; text-align:center; min-height:80vh; background: #b0b0b0; color:white;}
   .hero h1 { font-family:'Montserrat',sans-serif; font-size:3em; margin:0;}
   .hero p { margin-top:15px; font-size:1.2em;}
-  .btn-primary { display:inline-block; padding:12px 28px; background:#fff; color:#A23400; border-radius:6px; margin-top:30px; font-family:'Montserrat',sans-serif; font-weight:700; transition:0.3s;}
-  .btn-primary:hover { background:#f0f0f0; transform:scale(1.05); }
+  .btn-primary { display:inline-block; padding:12px 28px; background:#A23400; color:white; border-radius:6px; margin-top:30px; font-family:'Montserrat',sans-serif; font-weight:700; transition:0.3s;}
+  .btn-primary:hover { background:#862800; transform:scale(1.05); }
 
   /* Section 區 */
   section { max-width:900px; margin:60px auto; padding:40px 20px; background:white; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.05);}
   h2 { font-family:'Montserrat',sans-serif; font-size:2em; color:#A23400; margin-bottom:20px; border-left:6px solid #A23400; padding-left:12px; }
 
-  /* Contact 按鈕 */
-  .contact-links { display:flex; flex-direction:column; align-items:center; gap:20px; font-size:1.2em; margin-top:20px; }
-  .contact-links a { padding:12px 24px; background:#A23400; color:white; border-radius:6px; transition:0.3s; font-family:'Montserrat',sans-serif; font-weight:600; }
-  .contact-links a:hover { background:#862800; transform:scale(1.05); }
+  /* Bio 文字行距 */
+  #about p {
+    line-height:2; /* 行距寬一些 */
+    font-size:1.1em;
+  }
 
   /* Works 按鈕 */
   .btn-secondary { display:inline-block; padding:12px 28px; background:#A23400; color:white; border-radius:6px; margin-top:20px; font-family:'Montserrat',sans-serif; font-weight:700; transition:0.3s;}
   .btn-secondary:hover { background:#862800; transform:scale(1.05); }
 
+  /* Contact 區 */
+  .contact-info { line-height:1.8em; font-size:1.2em; margin-top:20px; }
 </style>
 </head>
 <body>
 
 <nav>
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="bio.html">Bio</a></li>
-    <li><a href="works.html">Works</a></li>
+    <li><a href="#about">Bio</a></li>
+    <li><a href="#projects">Works</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -53,121 +56,49 @@
   <div>
     <h1>Vincent Yu-Tai Ou Yang</h1>
     <p>Composer | Pianist | Harpsichordist</p>
-    <a class="btn-primary" href="bio.html">Learn More</a>
-    <a class="btn-secondary" href="works.html">View Works</a>
   </div>
 </div>
 
-<!-- Contact 區 -->
-<section>
-  <h2>Contact</h2>
-  <div class="contact-links">
-    <a href="mailto:eefgh8785@email.com">📧 Email Me</a>
-    <a href="tel:+18252883413">📞 Call Me</a>
-    <a href="https://soundcloud.com/yuta-185090400" target="_blank">🎵 SoundCloud</a>
-  </div>
-</section>
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bio - Vincent Yu-Tai Ou Yang</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;padding:0;font-family:'Merriweather',serif;background:#fafafa;color:#333;}
-  a{text-decoration:none; color:inherit;}
-  nav {position:sticky; top:0; width:100%; background:rgba(255,255,255,0.9); backdrop-filter:blur(8px); box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:1000;}
-  nav ul{display:flex; justify-content:center; list-style:none; margin:0; padding:15px;}
-  nav ul li{margin:0 20px;}
-  nav ul li a{font-family:'Montserrat',sans-serif; font-weight:500; color:#555;}
-  nav ul li a:hover{color:#A23400;}
-  section{max-width:900px;margin:60px auto;padding:40px 20px;background:white;border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.05);}
-  h2{font-family:'Montserrat',sans-serif;font-size:2em;color:#A23400;margin-bottom:20px;border-left:6px solid #A23400;padding-left:12px;}
-</style>
-</head>
-<body>
-
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="bio.html">Bio</a></li>
-    <li><a href="works.html">Works</a></li>
-  </ul>
-</nav>
-
-<section>
+<!-- Bio -->
+<section id="about">
   <h2>Bio</h2>
-  <p>Vincent Yu‑Tai Ouyang is a composer, pianist, and harpsichordist. His musical compositions often explore observations of life and reflect on emotional experiences, aiming to convey emotions through his music. Currently pursuing his Master of Music degree in composition at the University of Calgary, he studies with Dr. Laurie Radford and is completing his thesis under the supervision of Prof. Allan Gordon Bell. Vincent is currently exploring orchestral and large ensemble writing, with a particular focus on integrating East Asian aesthetics into contemporary Western idioms.</p>
+  <p>Vincent Yu-Tai Ouyang is a composer, pianist, and harpsichordist. His musical compositions often explore observations of life and reflect on emotional experiences, aiming to convey emotions through his music. Currently pursuing his Master of Music degree in composition at the University of Calgary, he studies with Dr. Laurie Radford and is completing his thesis under the supervision of Prof. Allan Gordon Bell. Vincent is currently exploring orchestral and large ensemble writing, with a particular focus on integrating East Asian aesthetics into contemporary Western idioms.</p>
 </section>
 
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Works - Vincent Yu-Tai Ou Yang</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;padding:0;font-family:'Merriweather',serif;background:#fafafa;color:#333;}
-  a{text-decoration:none; color:inherit;}
-  nav {position:sticky; top:0; width:100%; background:rgba(255,255,255,0.9); backdrop-filter:blur(8px); box-shadow:0 2px 8px rgba(0,0,0,0.1); z-index:1000;}
-  nav ul{display:flex; justify-content:center; list-style:none; margin:0; padding:15px;}
-  nav ul li{margin:0 20px;}
-  nav ul li a{font-family:'Montserrat',sans-serif; font-weight:500; color:#555;}
-  nav ul li a:hover{color:#A23400;}
-  section{max-width:900px;margin:60px auto;padding:40px 20px;background:white;border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.05);}
-  h2{font-family:'Montserrat',sans-serif;font-size:2em;color:#A23400;margin-bottom:20px;border-left:6px solid #A23400;padding-left:12px;}
-  .works-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;}
-  .work-card{background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:20px; transition: transform 0.3s, box-shadow 0.3s;}
-  .work-card:hover{transform:translateY(-5px); box-shadow:0 6px 18px rgba(0,0,0,0.1);}
-  .btn-primary{display:inline-block;padding:12px 28px;background-color:#A23400;color:white;border-radius:6px;margin-top:30px;font-family:'Montserrat',sans-serif;font-weight:700; transition:0.3s;}
-  .btn-primary:hover{background-color:#862800; transform:scale(1.05);}
-</style>
-</head>
-<body>
-
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="bio.html">Bio</a></li>
-    <li><a href="works.html">Works</a></li>
-  </ul>
-</nav>
-
-<section>
+<!-- Works -->
+<section id="projects">
   <h2>Works</h2>
-  <div class="works-grid">
-    <div class="work-card"><p>Éparpillement for alto saxophone and piano (2025)</p></div>
-    <div class="work-card"><p>Souvenir for violin and piano (2025)</p></div>
-    <div class="work-card"><p>Désireux II for violin, violoncello and piano (2024)</p></div>
-    <div class="work-card"><p>Fugue for keyboard solo (2024)</p></div>
-    <div class="work-card"><p>Fughetta in G major for keyboard solo (2024)</p></div>
-    <div class="work-card"><p>With the Night for flute, violin, violoncello, soprano and piano (2023)</p></div>
-    <div class="work-card"><p>Fughetta in f minor for keyboard solo (2023)</p></div>
-    <div class="work-card"><p>Rêve for string quartet (2023)</p></div>
-    <div class="work-card"><p>Tai Zu Lau Gie Gung for a cappella (2023)</p></div>
-    <div class="work-card"><p>Calliope for orchestra (2022)</p></div>
-    <div class="work-card"><p>Intermezzo for piano solo (2022)</p></div>
-    <div class="work-card"><p>Prélude for piano solo (2022)</p></div>
-    <div class="work-card"><p>Kyo for piano solo (2022)</p></div>
-    <div class="work-card"><p>Désireux for clarinet, violoncello and piano (2021)</p></div>
-    <div class="work-card"><p>Piano Trio in E minor for violin, cello and piano (2021)</p></div>
-    <div class="work-card"><p>Fugue in F Sharp minor for keyboard solo (2021)</p></div>
+  <p>Éparpillement for alto saxophone and piano (2025)</p>
+  <p>Souvenir for violin and piano (2025)</p>
+  <p>Désireux II for violin, violoncello and piano (2024)</p>
+  <p>Fugue for keyboard solo (2024)</p>
+  <p>Fughetta in G major for keyboard solo (2024)</p>
+  <p>With the Night for flute, violin, violoncello, soprano and piano (2023)</p>
+  <p>Fughetta in f minor for keyboard solo (2023)</p>
+  <p>Rêve for string quartet (2023)</p>
+  <p>Tai Zu Lau Gie Gung for a cappella (2023)</p>
+  <p>Calliope for orchestra (2022)</p>
+  <p>Intermezzo for piano solo (2022)</p>
+  <p>Prélude for piano solo (2022)</p>
+  <p>Kyo for piano solo (2022)</p>
+  <p>Désireux for clarinet, violoncello and piano (2021)</p>
+  <p>Piano Trio in E minor for violin, cello and piano (2021)</p>
+  <p>Fugue in F Sharp minor for keyboard solo (2021)</p>
+
+  <a class="btn-secondary" href="https://soundcloud.com/yuta-185090400" target="_blank">🎵 Listen on SoundCloud</a>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <p>Email: eefgh8785@email.com</p>
+    <p>Phone: +1 825-288-3413</p>
+    <p>SoundCloud: <a href="https://soundcloud.com/yuta-185090400" target="_blank">https://soundcloud.com/yuta-185090400</a></p>
   </div>
-  <a class="btn-primary" href="https://soundcloud.com/yuta-185090400" target="_blank">🎵 Listen on SoundCloud</a>
 </section>
 
 </body>
 </html>
+
 
